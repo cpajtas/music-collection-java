@@ -31,6 +31,7 @@ public class DatabaseAccessMenu {
 		System.out.println("Please enter the following options to access the database:");
 		System.out.println("SELECT - View the table entries in the database, using user defined input parameters.");
 		System.out.println("TABLES - Show a list of tables available to access.");
+		System.out.println("ADD - Add an entry to a table");
 		System.out.println("UPDATE - Update a table in the music collection user user defined input parameters.");
 		System.out.println("DELETE - Delete an entry from a table in the music collection.");
 		System.out.println("EXIT - Exits the database program.");
@@ -63,6 +64,7 @@ public class DatabaseAccessMenu {
 			System.out.println("Please enter the names of each column to select (seperate with commas, no spaces! ex. col1,col2 [try to type like table.col])");
 			columns = kb.next();
 			
+			// find primary keys and set equal to foreign keys in other tables
 			// ask for conditions to select
 			System.out.println("Type each where condition (seperate with commas, no spaces! ex. col1=con1 and col2=con2,...)");
 			System.out.println("Type \"NONE\" for no conditions.");
@@ -73,6 +75,9 @@ public class DatabaseAccessMenu {
 			break;
 		case "TABLES":
 			doa.showTables();
+			break;
+		case "ADD":
+			
 			break;
 		case "UPDATE":
 			// ask user for table(s) to update
